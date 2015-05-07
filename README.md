@@ -1,3 +1,5 @@
+# (Fork for SPS build system)
+
 # Leiningen
 
 <img src="http://leiningen.org/img/leiningen.jpg"
@@ -22,7 +24,7 @@ Leiningen installs itself on the first run of the `lein` shell script; there is 
 separate install script.  Follow these instructions to install Leiningen manually:
 
 1. Make sure you have a Java JDK version 6 or later.
-2. [Download the `lein` script from the `stable` branch](https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein)
+2. [Download the `lein` script from the (Skyport version of the) `stable` branch](https://raw.githubusercontent.com/skyportsystems/leiningen/stable/bin/lein)
  of this project.
 3. Place it on your `$PATH`. (`~/bin` is a good choice if it is on your path.)
 4. Set it to be executable. (`chmod 755 ~/bin/lein`)
@@ -35,7 +37,7 @@ There is
 will handle downloading and placing Leiningen and its dependencies.
 
 The manual method of putting
-[the batch file](https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein.bat).
+[the (Skyport version) batch file](https://raw.githubusercontent.com/skyportsystems/leiningen/stable/bin/lein.bat).
 on your `PATH` and running `lein self-install` should still work for
 most users. If you have [Cygwin](http://www.cygwin.com/) you should be
 able to use the shell script above rather than the batch file.
