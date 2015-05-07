@@ -191,7 +191,7 @@ if not exist %LEIN_INSTALL_DIR% mkdir %LEIN_INSTALL_DIR%
 
 echo Downloading Leiningen now...
 
-set LEIN_JAR_URL=https://github.com/technomancy/leiningen/releases/download/%LEIN_VERSION%/leiningen-%LEIN_VERSION%-standalone.zip
+set LEIN_JAR_URL=https://github.com/skyportsystems/leiningen/releases/download/%LEIN_VERSION%/leiningen-%LEIN_VERSION%-standalone.zip
 call :DownloadFile "%LEIN_JAR%.pending" "%LEIN_JAR_URL%"
 if ERRORLEVEL 1 (
     del "%LEIN_JAR%.pending" >nul 2>&1
@@ -223,7 +223,7 @@ exit /B 1
 :YES_UPGRADE
 echo Downloading latest Leiningen batch script...
 
-set LEIN_BAT_URL=https://github.com/technomancy/leiningen/raw/%TARGET_VERSION%/bin/lein.bat
+set LEIN_BAT_URL=https://github.com/skyportsystems/leiningen/raw/%TARGET_VERSION%/bin/lein.bat
 set TEMP_BAT=%~dp0temp-lein-%RANDOM%%RANDOM%.bat
 call :DownloadFile "%LEIN_BAT%.pending" "%LEIN_BAT_URL%"
 if ERRORLEVEL 1 (

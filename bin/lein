@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Modified Skyport Systems version
+
 # Ensure this file is executable via `chmod a+x lein`, then place it
 # somewhere on your $PATH, like ~/bin. The rest of Leiningen will be
 # installed upon first run into the ~/.lein/self-installs directory.
@@ -65,7 +67,7 @@ function self_install {
   fi
   echo "Downloading Leiningen to $LEIN_JAR now..."
   mkdir -p "$(dirname "$LEIN_JAR")"
-  LEIN_URL="https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip"
+  LEIN_URL="https://github.com/skyportsystems/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.zip"
   $HTTP_CLIENT "$LEIN_JAR.pending" "$LEIN_URL"
   local exit_code=$?
   if [ $exit_code == 0 ]; then
@@ -267,7 +269,7 @@ elif [ "$1" = "upgrade" ] || [ "$1" = "downgrade" ]; then
                 if $cygwin; then
                     TARGET=`cygpath -w $TARGET`
                 fi
-                LEIN_SCRIPT_URL="https://github.com/technomancy/leiningen/raw/$TARGET_VERSION/bin/lein"
+                LEIN_SCRIPT_URL="https://github.com/skyportsystems/leiningen/raw/$TARGET_VERSION/bin/lein"
                 $HTTP_CLIENT "$TARGET" "$LEIN_SCRIPT_URL"
                 if [ $? == 0 ]; then
                     cmp -s "$TARGET" "$SCRIPT"
